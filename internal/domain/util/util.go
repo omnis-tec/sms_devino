@@ -15,7 +15,7 @@ func NormalizePhone(p string) string {
 		if p[0] == '+' {
 			p = p[1:]
 		} else {
-			if l == 10 && p[0] == '7' {
+			if l == 10 {
 				p = "7" + p
 			} else if l == 11 && strings.HasPrefix(p, "87") {
 				p = "7" + p[1:]
